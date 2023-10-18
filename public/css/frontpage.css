@@ -130,7 +130,7 @@
 
     .tags {
         margin: auto;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     .tag {
