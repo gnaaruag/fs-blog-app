@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="/js/likedisplay.js"></script>
+    <link rel="icon" href="/public/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="topbar">
+        <h3>   Hello! Admin</h3>
+        <a class="logout" href="/logout">Logout</a>
+    </nav>
+
+    <a class="new" href="/create">+ New</a>
+
+    <div class="blogs">
+        <% for(var b of send) { %>
+            <div class="blog">
+                <h3><%= b.title %></h3>
+                <div class="lower">
+                    <div class="misc-data">
+                        <i class="fa-regular fa-heart fa-lg" style="color: rgba(204, 59, 59, 0.955);"></i>
+                        <p><%= b.likes %></p>
+                        <i class="fa-regular fa-comment-dots fa-lg" style="color: rgba(0, 0, 0, 0.955);"></i>
+                        <p><%= b.comments %></p>
+                    </div>
+                    <div class="actions">
+                        <a class="view" href="/view/<%= b.bid%>"><i class="fa-solid fa-eye" style="color: #ffffff;"></i></a>
+                        <a class="edit" href="/update/<%= b.bid%>"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></a>
+                        <a class="delete" href="/delete/<%= b.bid%>"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.topbar {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    background-color: rgba(235, 235, 235, 0.762);
+    padding: 1em 1em 1em 1em;
+}
+
+.logout {
+    background-color: rgba(204, 59, 59, 0.955);
+    padding: 0.75em 0.5em;
+    text-decoration: none;
+    border-radius: 0.25em;
+    color: white;
+    
+}
+.logout:hover {
+    background-color: rgba(204, 59, 59, 0.812);
+    color: black
+    ;
+}
+
+.blogs {
+    margin: 2em 6em;
+    background-color: rgba(235, 235, 235, 0.762);
+    border-radius: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.view {
+    
+    padding: 0.75em 1em;
+    text-decoration: underline;
+    color: black;
+}
+
+.blog {
+    padding: 1.5em 3em;
+}
+
+.misc-data {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    margin: 1em 3em;
+
+}
+
+.misc-data i,p {
+    margin: 0 0.25em;
+}
+
+.actions {
+    margin: 0 3em;
+}
+
+.tags{
+    display: flex;
+    margin: 1em 1em;
+}   
+
+.tag {
+    background-color: rgb(203, 203, 203);
+    margin: 0 0.5em;
+    padding: 0.25em 0.5em;
+    border-radius: 0.3em;
+    font-size: 0.9em;
+}
+
+.filter {
+    margin: 1em 6em;
+    background-color: rgba(235, 235, 235, 0.762);
+    border-radius: 1em;
+    padding: 1em 3em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.filtgo {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(73, 201, 80);
+    border: none;
+    color: white;
+    font-weight: 800;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+#theme {
+    font-size: 1em;
+}
+
+
+
+
+.filtgo:hover {
+    background-color: rgba(73, 201, 79, 0.819);
+    color: black;
+    border: none
+}
+
+@media (max-width: 600px) {
+    .filter {
+        margin: 1em 1em;
+    }
+
+    .blogs {
+        margin: 1em 1em;
+    }
+    .blog {
+        margin: 0em 1em;
+        padding: 1em 0em;
+    }
+
+    .view {
+        text-align: center;
+    }
+
+
+    .tags {
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+    .tag {
+        font-size: 0.5em;
+    }
+
+    .misc-data {
+        justify-content: center;
+    }
+}

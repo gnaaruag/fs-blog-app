@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    border: 0.1em solid rgba(240, 240, 240, 0.753);
+    margin: 1em 3em;
+}
+
+h1 {
+    margin: 1em 2em;
+}
+
+.tags{
+    display: flex;
+    margin-left: 4em;
+}   
+
+.tag {
+    background-color: rgb(240, 240, 240);
+    margin: 0 0.5em;
+    padding: 0.25em 0.5em;
+    border-radius: 0.3em;
+    font-size: 0.9em;
+}
+
+img {
+    margin: 1em auto;
+    margin-left: 4em;
+
+    border-radius: 1em;
+    width: 90%;
+    max-height: 40em;
+    overflow: hidden;
+}
+
+.body {
+    margin: 1em 6em;
+}
+
+.content-paragraph {
+    margin: 1em 5em;
+}
+
+textarea {
+    margin: 1em 10em;
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+}
+
+.userinteract {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 1em 50em;
+    padding: 1em 1em;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(73, 201, 80);
+    border: none;
+    color: white;
+    font-weight: 800;
+    border-radius: 0.5em;
+}
+
+button:hover {
+    background-color: rgba(73, 201, 79, 0.819);
+    color: black;
+    border: none
+}
+
+.comments-display{
+    margin: 1em 5em;
+    border: 0.05em solid rgb(208, 205, 205);
+    border-radius: 0.25em;
+    padding: 1em 1em;
+}
+
+.comm {
+    margin: 0 1em;
+}
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        margin: 1em auto;
+        text-align: center;
+    }
+
+    .tags{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+
+    }   
+    
+    .tag {
+        background-color: rgb(240, 240, 240);
+        margin: 0 0.5em;
+        padding: 0.25em 0.5em;
+        border-radius: 0.3em;
+        font-size: 0.9em;
+    }
+
+
+    img {
+        
+        margin: 1em 1em;
+    }
+
+    .content-paragraph {
+        margin: 1em;
+    }
+
+    textarea {
+        margin: 2em;
+    }
+
+    .likepost {
+        margin: 1em 4em;
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        margin: 1em 4em;
+        display: flex;
+        justify-content: center;
+    }
+
+    .comments-display{
+        margin: 1em 1em;
+        border: 0.05em solid rgb(208, 205, 205);
+        border-radius: 0.25em;
+        padding: 1em 1em;
+    }
+    
+    .comm {
+        margin: 0 1em;
+    }
+}

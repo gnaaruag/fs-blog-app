@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post</title>
+    <link rel="stylesheet" href="/css/view.css">
+    <script src="/js/likedisplay.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="main">
+        <h1><%= send.title %></h1>
+
+    <div class="tags">
+        <% for (var tag of send.tags) {%>
+            <p class="tag"><%= tag %></p> 
+        <% } %>
+    </div>
+
+    <% if (!(send.image === '/')) { %>
+        <img src="<%= send.image %>" alt="something went wrong while fetching the image">
+    <% } %>
+    <% for (var para of send.content) {%>
+        <p class="content-paragraph"><%= para %></p> 
+    <% } %>
+    </div>
+
+    <div class="userinteract">
+        <div class="likepost">
+            <form action="/like/<%= send.bid %>" method="post">
+                <button>
+                    <% if (send.isLiked) {%>
+                        <i id="like" class="fa-solid fa-heart fa-2x" style="color: rgba(204, 59, 59, 0.955);"></i>
+                    <% } else { %>
+                        <i id="like" class="fa-regular fa-heart fa-2x" style="color: rgba(204, 59, 59, 0.955);"></i>
+                    <% } %>
+                </button>
+            </form>
+        </div>
+        <form action="/comment/<%= send.bid %>" method="post">
+            <textarea  placeholder="Add your comment..." name="comment" id="" cols="50" rows="6"></textarea>
+            <button type="submit">Post</button>
+        </form>
+        <hr>
+        <% if (send.noCom == 0) {%>
+            <p>There are no comments yet. Be the first one to comment..</p>
+        <% } else {%>
+            <div class="comments-display">
+                <% for (var e of send.comments) { %>
+                    <div class="comment">
+                        <h4 class="name">
+                            <%= e.name%> said:
+                        </h4>
+                        <p class="comm"><%= e.comm%></p>
+                    </div>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+
+
+    <script>
+     const changeButton = document.getElementById('like');
+changeButton.addEventListener('click', function toggle() {
+    const changeButton = document.getElementById('like');
+
+        
+
+    if (changeButton.classList.contains('fa-regular')){
+        changeButton.classList.remove('fa-regular');
+        changeButton.classList.add('fa-solid');
+    }
+    else {
+        changeButton.classList.remove('fa-solid');
+        changeButton.classList.add('fa-regular');
+    }
+    
+});
+    </script>
+</body>
+</html>

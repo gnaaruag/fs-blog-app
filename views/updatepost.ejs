@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create a New Blog Post</title>
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+<body>
+    <h1>Create a New Blog Post</h1>
+    <form action="/handle-update/<%= send.bid %>" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="<%= send.title %>" required><br><br>
+        
+        <label for="image-link">Add an image link</label>
+        <label class="sec" for="image-link">(host your image on a host like imgur, if none type /)</label>
+        <input type="text" id="image-link" name="link" value="<%= send.image %>" required><br><br>
+        
+        <label for="tags">Tags:</label>
+        <label class="sec" for="tags">(Seperate by commas)</label>
+        <input type="text" id="tags" name="tags" value="<%= send.tags %>" required><br><br>
+        
+        <label for="content">Write Post content:</label><br>
+        <textarea id="content" name="content" rows="50" cols="50" required> <%= send.content %></textarea><br><br>
+
+        <input class="submit" type="submit" value="Submit">
+    </form>
+</body>
+</html>

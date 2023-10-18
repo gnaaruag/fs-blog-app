@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+form {
+    background-color: rgba(235, 235, 235, 0.762);
+    width: 90%;
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: 5em auto;
+    padding: 20px; /* Add some padding for better spacing */
+    border-radius: 1em;
+    text-align: center; /* Center the form contents */
+}
+
+input {
+    margin: 1em 0em;
+    border-radius: 0.25em;
+    width: 100%;
+    font-size: 1em;
+    background-color: white;
+    border: 0.1em groove rgba(239, 238, 238, 0.937);
+    padding: 0.5em;
+}
+
+button {
+    background-color: rgb(73, 201, 80);
+    color: white;
+    border: none;
+    font-size: 1em;
+    padding: 0.5em 1em; /* Adjust padding */
+    border-radius: 0.25em;
+    margin: 1em 0em;
+    font-weight: 800;
+}
+
+
+    p {
+        font-size: 1em;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin: 1em 0;
+        padding: 1em;
+    }
+
+
+a {
+    color: rgb(73, 201, 80);
+}
+
+button:hover {
+    background-color: rgba(73, 201, 79, 0.815);
+    color: black;
+}
+
+a:hover {
+    color: rgba(73, 201, 79, 0.815);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+}
