@@ -40,7 +40,7 @@ Choose a port of your preference.
 npm install
 ```
 
-6. Start the application using:
+5. Start the application using:
 ```
 npm start
 ```
