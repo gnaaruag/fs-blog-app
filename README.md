@@ -73,6 +73,5 @@ Key dependencies for this project include:
 - cookie-parser: Middleware for handling cookies.
 Make sure to check the package.json file for a complete list of dependencies.
 
-Note that the deploy link provided in the repository runs on a free instance so it will take a while to 
-
+Note that the deploy link provided in the repository runs on a free instance so it will take a while to boot up
 
